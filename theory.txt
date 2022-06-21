@@ -1,0 +1,99 @@
+The design pattern comes into picture when 4 c++ programmers write the books on it
+they wrote about 23 pattern which can be use in software development
+they divide this patterns into 3 categories.
+
+Creational : it's all about different ways to create objects
+Structural : structural patterns are all about relations between this objects
+Behavioural : it's about intraction and commucation between this objects.
+
+                                                                                                                                                                                                                                                                 
+Encapsulation:
+Bundling the data and methods that operate on data in side one class and the value or 
+state of an object inside of a class.
+
+for example consider you have a class called Account in which class consumer can create account
+you have one varialbe call balance in this class if you make it private any one from the outside
+the class can set any value to your balance varialble like -1 or string or something else.
+to avoid this you can make your variable private and set it's value from one of the class method
+in this method u can perform validations by doing this you just encapsulate the variable inside 
+your setAmount method. 
+
+Abstraction:
+we should reduce complexity by hidding complex logic inside our class.
+for example consider you have a class for sending emails to send emails some steps which are 
+required are
+1: Connecting to email server
+2: Authenticating user 
+3: Sending email
+4: close the connection
+
+but wait our class consumer don't know all about this he just want to send an email in this case
+we will create a make all the method private except sendEmail method which acctually calls this 
+methods. That's how we hide the complexity of class from outer world this is known as abstration.
+
+#Inharitance
+This concept is mainly focus on DRY(don't repeat your self) it allows you to inherit the code 
+which is repeating so many times. To implement this we create one base class in wich we store
+the repetative code or code which we will use so many times.
+
+for example your a building the a Framework for creating awesome GUI 
+in this you have classes for 
+//Button
+//text box
+//check box
+//radio buttons
+
+and for all this classes some freatures are common like
+//autofocus
+//border
+//validation mssg
+
+so istead of writing all the common method for every component class you can create one base 
+class and inherit that class in where ever you want to use it.
+
+#Polymorphism
+this stands for many forms. This means one object can take many forms.
+its like many functions with same name but with different parameter can perform different task.
+
+take the above gui example lets just assume in parent or base class we have one draw method
+but every child have their own drawing or implementation in this case child method can override the
+parent draw method. As you see a single method draw have multiple implementaion or forms this is 
+called Polymorphism
+
+
+Small intro UML
+this stands for Unified Markum Language. this is diagram based representation of classes
+we can define realtions between classes using the diagram as of now we have only 
+3 relations 
+
+1: Inheritance    (--------->)   we use this arraow to show one class inheriting other class
+                                 (arrow is straghit not dashed)
+
+2: Composition    (*-------->)   we use this diagram to show one class is composed from other class
+                                  (that is not start there is diamond)
+3: Dependency     (---------->)  we use this diagram to show one class is dependent on other class
+
+
+Memento pattern
+This pattern is widly use for implemening undo feature. Lets just assume you want to create 
+an Editor in which you have undo functionality
+
+There are three component in this pattern 
+1: orignator
+2: Memento
+3: care taker
+
+Orignator is class to which we intract. we set the value of variable in orignator
+and than we create an Memnto instastace with that value and store it in caretaker
+
+that's it. 
+
+
+State pattern
+We use Polymorphism to implement this pattern in this pattern like Polymorphism our object 
+will have many forms on runtime this is called state pattern.
+
+Context is the class to which we intract well it can be any name acording to your usecase.
+context will contact to state and pass instastace of any concretstate and later we use that 
+concretstate to use our methods.
+
