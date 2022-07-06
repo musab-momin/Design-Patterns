@@ -12,10 +12,10 @@ Bundling the data and methods that operate on data in side one class and the val
 state of an object inside of a class.
 
 for example consider you have a class called Account in which class consumer can create account
-you have one varialbe call balance in this class if you make it private any one from the outside
+you have one varialbe call balance in this class if you make it public any one from the outside
 the class can set any value to your balance varialble like -1 or string or something else.
-to avoid this you can make your variable private and set it's value from one of the class method
-in this method u can perform validations by doing this you just encapsulate the variable inside 
+to avoid this you can make your variable private and set it's value from one of the class method.
+In this method u can perform validations by doing this you just encapsulate the variable inside 
 your setAmount method. 
 
 Abstraction:
@@ -28,15 +28,15 @@ required are
 4: close the connection
 
 but wait our class consumer don't know all about this he just want to send an email in this case
-we will create a make all the method private except sendEmail method which acctually calls this 
-methods. That's how we hide the complexity of class from outer world this is known as abstration.
+we will make all the method private except sendEmail method which user gonna call this 
+method. That's how we hide the complexity of class from outer world this is known as abstration.
 
 #Inharitance
 This concept is mainly focus on DRY(don't repeat your self) it allows you to inherit the code 
 which is repeating so many times. To implement this we create one base class in wich we store
 the repetative code or code which we will use so many times.
 
-for example your a building the a Framework for creating awesome GUI 
+for example you are building the a Framework for creating awesome GUI 
 in this you have classes for 
 //Button
 //text box
@@ -58,7 +58,7 @@ its like many functions with same name but with different parameter can perform 
 take the above gui example lets just assume in parent or base class we have one draw method
 but every child have their own drawing or implementation in this case child method can override the
 parent draw method. As you see a single method draw have multiple implementaion or forms this is 
-called Polymorphism
+called Polymorphism.
 
 
 Small intro UML
@@ -67,12 +67,13 @@ we can define realtions between classes using the diagram as of now we have only
 3 relations 
 
 1: Inheritance    (--------->)   we use this arraow to show one class inheriting other class
-                                 (arrow is straghit not dashed)
+  (is a realtionship)                              (arrow is straghit not dashed)
 
 2: Composition    (*-------->)   we use this diagram to show one class is composed from other class
-                                  (that is not start there is diamond)
-3: Dependency     (---------->)  we use this diagram to show one class is dependent on other class
+   (has a relationship)                            (that is not start there is diamond)
 
+3: Dependency     (---------->)  we use this diagram to show one class is dependent on other class
+   
 
 Memento pattern
 This pattern is widly use for implemening undo feature. Lets just assume you want to create 
@@ -94,6 +95,6 @@ We use Polymorphism to implement this pattern in this pattern like Polymorphism 
 will have many forms on runtime this is called state pattern.
 
 Context is the class to which we intract well it can be any name acording to your usecase.
-context will contact to state and pass instastace of any concretstate and later we use that 
-concretstate to use our methods.
+context will contact to state and pass instastace of any concrete state and later we use that 
+concrete state to use our methods.
 
